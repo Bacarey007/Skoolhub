@@ -28,7 +28,7 @@ export function Sidebar() {
           <School className="h-6 w-6" />
         </div>
         <div>
-          <h1 className="font-display font-bold text-lg leading-tight text-sidebar-foreground">EduManage</h1>
+          <h1 className="font-display font-bold text-lg leading-tight text-sidebar-foreground">skoolhub</h1>
           <p className="text-xs text-muted-foreground">School Admin</p>
         </div>
       </div>
