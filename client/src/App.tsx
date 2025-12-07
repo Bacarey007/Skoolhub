@@ -11,6 +11,10 @@ import TakeExamPage from "@/pages/exams/take";
 import StudentsPage from "@/pages/students";
 import AcademicsPage from "@/pages/academics";
 import SettingsPage from "@/pages/settings";
+import FinancePage from "@/pages/finance";
+import AttendancePage from "@/pages/attendance";
+import ClassesPage from "@/pages/classes";
+import HRPage from "@/pages/hr";
 
 function Router() {
   return (
@@ -21,6 +25,10 @@ function Router() {
       <Route path="/exams/:id/take" component={TakeExamPage} />
       <Route path="/students" component={StudentsPage} />
       <Route path="/academics" component={AcademicsPage} />
+      <Route path="/finance" component={FinancePage} />
+      <Route path="/attendance" component={AttendancePage} />
+      <Route path="/classes" component={ClassesPage} />
+      <Route path="/hr" component={HRPage} />
       <Route path="/settings" component={SettingsPage} />
       <Route path="/">
         <Redirect to="/events" />

@@ -1,13 +1,30 @@
-import { LayoutDashboard, Calendar, GraduationCap, Users, Settings, LogOut, School, Laptop } from "lucide-react";
 import { Link, useLocation } from "wouter";
+import { 
+  LayoutDashboard, 
+  Calendar, 
+  GraduationCap, 
+  Users, 
+  Settings, 
+  LogOut,
+  School,
+  Laptop,
+  Banknote,
+  ClipboardCheck,
+  Building2,
+  Briefcase
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const NAVIGATION = [
   { name: "Dashboard", icon: LayoutDashboard, href: "/dashboard" },
-  { name: "Events", icon: Calendar, href: "/events" },
-  { name: "CBT Exams", icon: Laptop, href: "/exams" },
+  { name: "Classes", icon: Building2, href: "/classes" },
   { name: "Students", icon: Users, href: "/students" },
   { name: "Academics", icon: GraduationCap, href: "/academics" },
+  { name: "Attendance", icon: ClipboardCheck, href: "/attendance" },
+  { name: "CBT Exams", icon: Laptop, href: "/exams" },
+  { name: "Finance", icon: Banknote, href: "/finance" },
+  { name: "HR / Staff", icon: Briefcase, href: "/hr" },
+  { name: "Events", icon: Calendar, href: "/events" },
   { name: "Settings", icon: Settings, href: "/settings" },
 ];
 
@@ -15,8 +32,8 @@ export function Sidebar() {
   const [location] = useLocation();
 
   return (
-    <div className="h-screen w-64 border-r bg-sidebar flex flex-col fixed left-0 top-0">
-      <div className="p-6 flex items-center gap-3 border-b border-sidebar-border">
+    <div className="h-screen w-64 border-r bg-sidebar flex flex-col fixed left-0 top-0 overflow-y-auto">
+      <div className="p-6 flex items-center gap-3 border-b border-sidebar-border sticky top-0 bg-sidebar z-10">
         <div className="h-10 w-10 rounded-lg bg-primary flex items-center justify-center text-primary-foreground">
           <School className="h-6 w-6" />
         </div>
@@ -47,7 +64,7 @@ export function Sidebar() {
         })}
       </nav>
 
-      <div className="p-4 border-t border-sidebar-border">
+      <div className="p-4 border-t border-sidebar-border mt-auto">
         <button className="flex items-center gap-3 px-3 py-2 w-full rounded-md text-sm font-medium text-muted-foreground hover:bg-sidebar-accent/50 hover:text-foreground transition-colors">
           <LogOut className="h-4 w-4" />
           Sign Out
