@@ -15,10 +15,12 @@ import FinancePage from "@/pages/finance";
 import AttendancePage from "@/pages/attendance";
 import ClassesPage from "@/pages/classes";
 import HRPage from "@/pages/hr";
+import DashboardPage from "@/pages/dashboard";
 
 function Router() {
   return (
     <Switch>
+      <Route path="/dashboard" component={DashboardPage} />
       <Route path="/events" component={EventsPage} />
       <Route path="/exams" component={ExamsDashboard} />
       <Route path="/exams/create" component={CreateExamPage} />
@@ -31,7 +33,7 @@ function Router() {
       <Route path="/hr" component={HRPage} />
       <Route path="/settings" component={SettingsPage} />
       <Route path="/">
-        <Redirect to="/events" />
+        <Redirect to="/dashboard" />
       </Route>
       <Route component={NotFound} />
     </Switch>
