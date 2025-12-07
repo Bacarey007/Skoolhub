@@ -10,6 +10,7 @@ import CreateExamPage from "@/pages/exams/create";
 import TakeExamPage from "@/pages/exams/take";
 import StudentsPage from "@/pages/students";
 import AcademicsPage from "@/pages/academics";
+import SettingsPage from "@/pages/settings";
 
 function Router() {
   return (
@@ -20,6 +21,7 @@ function Router() {
       <Route path="/exams/:id/take" component={TakeExamPage} />
       <Route path="/students" component={StudentsPage} />
       <Route path="/academics" component={AcademicsPage} />
+      <Route path="/settings" component={SettingsPage} />
       <Route path="/">
         <Redirect to="/events" />
       </Route>
