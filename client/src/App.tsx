@@ -5,11 +5,17 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import EventsPage from "@/pages/events";
+import ExamsDashboard from "@/pages/exams/index";
+import CreateExamPage from "@/pages/exams/create";
+import TakeExamPage from "@/pages/exams/take";
 
 function Router() {
   return (
     <Switch>
       <Route path="/events" component={EventsPage} />
+      <Route path="/exams" component={ExamsDashboard} />
+      <Route path="/exams/create" component={CreateExamPage} />
+      <Route path="/exams/:id/take" component={TakeExamPage} />
       <Route path="/">
         <Redirect to="/events" />
       </Route>

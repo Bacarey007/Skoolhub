@@ -1,18 +1,11 @@
+import { LayoutDashboard, Calendar, GraduationCap, Users, Settings, LogOut, School, Laptop } from "lucide-react";
 import { Link, useLocation } from "wouter";
-import { 
-  LayoutDashboard, 
-  Calendar, 
-  GraduationCap, 
-  Users, 
-  Settings, 
-  LogOut,
-  School
-} from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const NAVIGATION = [
   { name: "Dashboard", icon: LayoutDashboard, href: "/dashboard" },
   { name: "Events", icon: Calendar, href: "/events" },
+  { name: "CBT Exams", icon: Laptop, href: "/exams" },
   { name: "Students", icon: Users, href: "/students" },
   { name: "Academics", icon: GraduationCap, href: "/academics" },
   { name: "Settings", icon: Settings, href: "/settings" },
